@@ -5,10 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { AvisComponent } from './avis/avis.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { UtilisateurService } from './services/utilisateur.service';
+import { AvisService } from './services/avis.service';
+import { ReservationService } from './services/reservation.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UtilisateurComponent,
+    AvisComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UtilisateurService,AvisService,ReservationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
